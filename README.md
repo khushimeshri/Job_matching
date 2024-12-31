@@ -51,6 +51,7 @@ Google API Key for Generative AI
 Clone the Repository:
 
 git clone https://github.com/your-username/smart-ats.git
+
 cd smart-ats
 
 Install Dependencies:
@@ -123,41 +124,30 @@ Resume: PDF or DOCX file uploaded by the user.
 Output:
 
 {
+
   "Skill Match": {
     "percentage": "80%",
     "missing_skills": ["AWS"]
   },
+  
   "Experience Match": {
     "percentage": "90%",
     "justification": "Candidate has 3 years of experience in Python and data analysis."
   },
+  
   "Education Fit": {
     "percentage": "100%",
     "justification": "Candidate holds a degree in Computer Science."
   },
+  
   "Technological Fit": {
     "percentage": "75%",
     "missing_technologies": ["AWS"]
   }
+  
 }
 
-Contributing
 
-Fork the repository.
-
-Create a feature branch:
-
-git checkout -b feature-name
-
-Commit your changes:
-
-git commit -m "Add feature-name"
-
-Push to the branch:
-
-git push origin feature-name
-
-Create a Pull Request.
 
 Acknowledgments
 
