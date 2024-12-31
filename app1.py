@@ -1,4 +1,4 @@
-#importing al the requirements 
+#importing all the requirements 
 from docx import Document
 import streamlit as st
 import google.generativeai as genai
@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()  #this will load all environment variables
 
 #configuring my google Generative AI using an API key
-genai.configure(api_key="GEMINI_API_KEY")
+genai.configure(api_key="AIzaSyCui4RYLVhW9BfWkHZf2eitcbXgBcPzlWg")
 
 # Function to get response from Gemini model
 def get_gemini_repsonse(input):
@@ -47,18 +47,20 @@ with the job description and identify the best matching roles based on the follo
 resume: {text}
 description: {jd}
 
-I want the response in one single string having the structure
-{{
-  "Skill Match": {
-    "percentage": "XX%", "missing_skills": ["skill1", "skill2"]},
+I want the response in the following structure:
+{
+  "Skill Match": 
+    "percentage": "XX%", "missing_skills": ["skill1", "skill2"]
   
-  "Experience Match": {
-    "percentage": "XX%", "justification": "Detailed explanation of how the experience aligns."},
+  "Experience Match": 
+    "percentage": "XX%", "justification": "Detailed explanation of how the experience aligns."
   
-  "Education Fit": {"percentage": "XX%", "justification": "Detailed explanation of how the education aligns."},
+  "Education Fit": 
+    "percentage": "XX%", "justification": "Detailed explanation of how the education aligns."
   
-  "Technological Fit": {"percentage": "XX%", "matching_technologies": ["tech1", "tech2"]}
-}}
+  "Technological Fit":
+     "percentage": "XX%", "matching_technologies": ["tech1", "tech2"]
+}
 
 """
 #Now inorder to provide a user-interface we have used "streamlit"
